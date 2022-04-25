@@ -18,7 +18,7 @@ puts 'Creating restaurants...'
     phone_number: Faker::PhoneNumber.phone_number,
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample
   )
+
   puts "restaurant #{restaurant.id} is created"
 end
-
 puts 'done'
