@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RestaurantsController < ApplicationController
   before_action :find_restaurant, only: %i[show edit update destroy]
 
@@ -43,6 +45,4 @@ class RestaurantsController < ApplicationController
   def find_restaurant
     @restaurant = Restaurant.find(params[:id])
   end
-
-
 end
