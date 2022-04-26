@@ -1,10 +1,15 @@
-<h1>Welcome to the Restaurant Review Database</h1>
+<div class="container p-5 m-5 shadow bg-white rounded">
+    <h1 class="text-center">Welcome to the Restaurant Database</h1>
 
-<%= link_to 'Create a new restaurant', new_restaurant_path %>
-
-<% @restaurants.each do |restaurant|  %>
-  <h5><%= link_to restaurant.name, restaurant_path(restaurant) %></h5>
-  <p><%= restaurant.address %></p>
-  <p><%= restaurant.phone_number %></p>
-  <p><%= restaurant.category %></p>
-<% end %>
+    <h4 class="text-end sticky-top"><%= link_to 'Create a new restaurant', new_restaurant_path %></h4>
+    <div class="">
+    <div class="d-grid gap-1 p-5 names">
+    <% @restaurants.each do |restaurant|  %>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 p-2 bg-light border rounded"><h5><%= link_to restaurant.name, restaurant_path(restaurant) %></h5>
+      <p><%= restaurant.address %></p>
+      <p><%= restaurant.phone_number %></p>
+      <p><%= restaurant.category %></p></div>
+    <% end %>
+    </div>
+    </div>
+</div>
